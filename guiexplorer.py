@@ -5,19 +5,32 @@ win.title("Python GUI")
 # win.resizable(0,0)
 
 
-alabel = ttk.Label(win, text="A Label")
-alabel.grid(column=0, row=0)
 
 
 
 def clickMe():
     buttonAction.configure(text="** I have been clicked! **")
-    alabel.configure(forground='red')
+    alabel.configure(foreground='red')
     alabel.configure(text='A Red Label')
 
-buttonAction = ttk.Button(win, text = "Click Me", command=clickMe).grid(column=1, row=0)
 
-ttk.Label(win, text="A Label").grid(column=0, row=0)
+alabel = ttk.Label(win, text="A Label")
+alabel.grid(column=0, row=0)
+
+buttonAction = ttk.Button(win, text = "Click Me", command=clickMe)
+buttonAction.grid(column=1, row=0)
+
+def click2Me():
+    buttonAction.configure(text="Hello " + name.get())
+
+ttk.Label(win, text="Enter a name:").grid(column=0, row=1)
+
+name
+aEntry = ttk.Endtry(win, text="")
+alabel.grid(column=0, row=1)
+
+buttonAction = ttk.Button(win, text = "Click2 Me", command=click2Me)
+buttonAction.grid(column=1, row=1)
 
 
 

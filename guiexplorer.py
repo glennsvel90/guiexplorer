@@ -21,16 +21,16 @@ buttonAction = ttk.Button(win, text = "Click Me", command=clickMe)
 buttonAction.grid(column=1, row=0)
 
 def click2Me():
-    buttonAction.configure(text="Hello " + name.get())
+    button2Action.configure(text="Hello " + name.get())
 
 ttk.Label(win, text="Enter a name:").grid(column=0, row=1)
 
-name
-aEntry = ttk.Endtry(win, text="")
-alabel.grid(column=0, row=1)
+name = tk.StringVar()
+aEntry = ttk.Entry(win, textvariable=name)
+aEntry.grid(column=0, row=1)
 
-buttonAction = ttk.Button(win, text = "Click2 Me", command=click2Me)
-buttonAction.grid(column=1, row=1)
+button2Action = ttk.Button(win, text = "Click2 Me", command=click2Me)
+button2Action.grid(column=1, row=1)
 
 
 

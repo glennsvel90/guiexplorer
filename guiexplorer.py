@@ -48,7 +48,12 @@ a3Entry.grid(column=0, row=4)
 button3Action = ttk.Button(win, text = "Click3 Me", command=click3Me)
 button3Action.grid(column=1, row=4)
 
-ttk.Label(win, text="Choose a number:").grid()
+ttk.Label(win, text="Choose a number:").grid(column=2, row=3)
+number = tk.StringVar()
+numberChosen = ttk.Combobox(win, textvariable=number)
+numberChosen["values"] = (1,10,50,100,500,1000)
+numberChosen.grid(column=2,row=4)
+numberChosen.current(0)
 
 
 

@@ -35,7 +35,7 @@ button2Action.grid(column=1, row=2)
 aEntry.focus() # make the mouse cursor appear on this widget at the start of the application
 
 def click3Me():
-    button3Action.configure(text="Hello " + name3.get())
+    button3Action.configure(text="Hello " + name3.get() + numberChosen.get())
     buttonAction.configure(state='disabled') # make the click3me disable the top button
 
 

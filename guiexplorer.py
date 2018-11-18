@@ -35,7 +35,7 @@ button2Action.grid(column=1, row=2)
 aEntry.focus() # make the mouse cursor appear on this widget at the start of the application
 
 def click3Me():
-    button3Action.configure(text="Hello " + name3.get() + numberChosen.get())
+    button3Action.configure(text="Hello " + name3.get() + ' ' + numberChosen.get())
     buttonAction.configure(state='disabled') # make the click3me disable the top button
 
 
@@ -50,10 +50,12 @@ button3Action.grid(column=1, row=4)
 
 ttk.Label(win, text="Choose a number:").grid(column=2, row=3)
 number = tk.StringVar()
-numberChosen = ttk.Combobox(win, textvariable=number)
+numberChosen = ttk.Combobox(win, textvariable=number, state='readonly')
 numberChosen["values"] = (1,10,50,100,500,1000)
 numberChosen.grid(column=2,row=4)
 numberChosen.current(0)
+
+
 
 
 

@@ -55,9 +55,17 @@ numberChosen["values"] = (1,10,50,100,500,1000)
 numberChosen.grid(column=2,row=4)
 numberChosen.current(0)
 
+# Creating 3 checkboxes
 
+checkboxvardis = tk.IntVar()
+discheckbox = tk.Checkbutton(win, text="Disabled", variable=checkboxvardis, state='disabled')
+discheckbox.select()
+discheckbox.grid(column=0, row=5, sticky=tk.W)
 
-
+checkboxvarun = tk.IntVar()
+uncheckbox = tk.Checkbutton(win, text="Unchecked", variable=checkboxvarun)
+uncheckbox.select()
+uncheckbox.grid(column=0, row=6, sticky=tk.W)
 
 
 

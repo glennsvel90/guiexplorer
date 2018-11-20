@@ -63,10 +63,14 @@ discheckbox.select()
 discheckbox.grid(column=0, row=5, sticky=tk.W)
 
 checkboxvarun = tk.IntVar()
-uncheckbox = tk.Checkbutton(win, text="Unchecked", variable=checkboxvarun)
-uncheckbox.select()
+uncheckbox = tk.Checkbutton(win, text="UnChecked", variable=checkboxvarun)
+uncheckbox.deselect()
 uncheckbox.grid(column=0, row=6, sticky=tk.W)
 
+checkboxvaren = tk.IntVar()
+encheckbox = tk.Checkbutton(win, text="Enabled", variable=checkboxvaren)
+encheckbox.select()
+encheckbox.grid(column=0, row=7, sticky=tk.W)
 
 
 
